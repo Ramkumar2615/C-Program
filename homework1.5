@@ -1,13 +1,10 @@
 #include<stdio.h>
 void main()
 {
-    int x,l,sum=0;
-    printf("enter x and limit");
-    scanf("%d%d",&x,&l);
-    for(int i=0;i<=l;i++){
-        if (i%x==0){
-            sum=sum+i;
-        }
+    int m,n,k;
+    printf("enter start stop and skip of the series:");
+    scanf("%d%d%d",&m,&n,&k);
+    for(int i=m;i<=n;i+=k){
+        printf("%d\n",i);
     }
-    printf("sum of all multiples of %d within the limit %d =%d",x,l,sum);
 }
