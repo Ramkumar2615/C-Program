@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    char source[100], destination[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    gets(source);   // read string (for lab exams this is commonly used)
+
+    // Copy characters one by one
+    while(source[i] != '\0')
+    {
+        destination[i] = source[i];
+        i++;
+    }
+
+    destination[i] = '\0';   // end of string
+
+    printf("Copied string: %s", destination);
+
+    return 0;
+}
