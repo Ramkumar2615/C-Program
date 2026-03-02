@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int a[] = {12, 10, 4, 10, 12, 56};
+    int n = 6;
+    int i, j, count;
+
+    printf("Non-repeated elements are: ");
+
+    for(i = 0; i < n; i++) {
+        count = 0;
+        for(j = 0; j < n; j++) {
+            if(a[i] == a[j]) {
+                count++;
+            }
+        }
+        if(count == 1) {
+            printf("%d ", a[i]);
+        }
+    }
+
+    return 0;
+}
