@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int n,count=0,num=2,sum=0,flag;
+    scanf("%d",&n);
+    while(count<n){
+        flag=1;
+        for(int i=2;i<=num/2;i++)
+            if(num%i==0){ flag=0; break; }
+        if(flag){ sum+=num; count++; }
+        num++;
+    }
+    printf("Sum=%d",sum);
+    return 0;
+}
