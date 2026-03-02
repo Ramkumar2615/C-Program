@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, max = 0;
+    int a[100], lis[100];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    // Initialize LIS values
+    for(i = 0; i < n; i++)
+        lis[i] = 1;
+
+    // Compute LIS
+    for(i = 1; i < n; i++)
+    {
+        for(j = 0; j < i; j++)
+        {
+            if(a[i] > a[j] && lis[i] < lis[j] + 1)
+                lis[i] = lis[j] + 1;
+        }
+    }
+
+    // Find maximum LIS
+    for(i = 0; i < n; i++)
+    {
+        if(lis[i] > max)
+            max = lis[i];
+    }
+
+    printf("Length of Longest Increasing Subsequence = %d", max);
+
+    return 0;
+}
