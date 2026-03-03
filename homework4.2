@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void table(int n)
+{
+    int i;
+    for(i = 1; i <= n; i++)
+        printf("%d x %d = %d\n", n, i, n*i);
+}
+
+int main()
+{
+    int n;
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    table(n);
+    return 0;
+}
