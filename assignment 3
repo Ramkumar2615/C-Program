@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int countWords(char str[])
+{
+    int i, count = 0;
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == ' ')
+            count++;
+    }
+    return count + 1;   // words = spaces + 1
+}
+
+int main()
+{
+    char str[100];
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Number of words = %d", countWords(str));
+
+    return 0;
+}
