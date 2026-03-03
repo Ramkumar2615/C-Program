@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void checkEqual(int a, int b)
+{
+    if(a == b)
+        printf("Both numbers are equal");
+    else
+        printf("Numbers are not equal");
+}
+
+int main()
+{
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &x, &y);
+
+    checkEqual(x, y);
+    return 0;
+}
